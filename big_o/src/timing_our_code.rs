@@ -1,4 +1,4 @@
-fn _add_up_to(n: u32) -> u32 {
+pub fn add_up_to1(n: u64) -> u64 {
     let mut total = 0;
 
     for i in 0..=n {
@@ -8,7 +8,7 @@ fn _add_up_to(n: u32) -> u32 {
     total
 }
 
-fn _add_up_too(n: u32) -> u32 {
+pub fn add_up_to2(n: u64) -> u64 {
     n * (n + 1) / 2
 }
 
@@ -18,15 +18,15 @@ mod tests {
 
     #[test]
     fn test_sample() {
-        let result = _add_up_to(6);
+        let result = add_up_to1(10000000);
         
-        assert_eq!(result, 21);
+        assert_eq!(result, 50000005000000);
     }
 
     #[test] 
     fn should_return_21() {
-        let result = _add_up_too(6);
+        let result = add_up_to2(100);
 
-        assert_eq!(result, 21);
+        assert_eq!(result, 5050);
     }
 }
