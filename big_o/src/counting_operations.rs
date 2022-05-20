@@ -5,8 +5,9 @@
    has to perform! */
 
 // Example 1:
-
-fn add_up_to(n: u32) -> u32 {
+/// Time complexity O(1), because it is always 3 operations
+/// -> CONSTANT TIME
+fn _add_up_to(n: u32) -> u32 {
     n * (n + 1) / 2
 }
 
@@ -22,8 +23,10 @@ fn add_up_to(n: u32) -> u32 {
  */
 
 // Example 2:
-
-pub fn add_up_to1(n: u64) -> u64 {
+/// Time complexity O(n), because its number of operation is
+/// bounded by a multiple of (n). eg -> 10n
+/// -> LINEAR TIME
+pub fn _add_up_to1(n: u64) -> u64 {
     // 1 assignment
     let mut total = 0;
 
@@ -42,3 +45,6 @@ pub fn add_up_to1(n: u64) -> u64 {
    
    But regardless of the exact number, the number of operations
    grows roughly propotionally with (n)*/
+
+
+

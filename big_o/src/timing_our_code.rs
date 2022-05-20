@@ -1,3 +1,4 @@
+/// Time complexity O(n)
 pub fn add_up_to1(n: u64) -> u64 {
     let mut total = 0;
 
