@@ -47,4 +47,26 @@ pub fn _add_up_to1(n: u64) -> u64 {
    grows roughly propotionally with (n)*/
 
 
+// SECTION  2 ->
+/// The Big O of the function in total can be
+/// simplified to O(n) instead of O(2n)
+/// -> LINEAR TIME
+pub fn _count_up_and_down(n: u32) {
+    println!("Going up!");
+
+    // Time Complexity -> O(n)
+    for i in 0..n {
+        println!("{}", i);
+    }
+
+    println!("At the top!\nGoing down...");
+
+    // Time Complexity -> O(n)
+    for j in (0..n).rev() {
+        println!("{}", j);
+    }
+
+    println!("Back down. Bye!");
+}
+
 
