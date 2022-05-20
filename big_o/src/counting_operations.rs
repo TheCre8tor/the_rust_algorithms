@@ -69,4 +69,14 @@ pub fn _count_up_and_down(n: u32) {
     println!("Back down. Bye!");
 }
 
-
+// SECTION  3 ->
+/// O(n) operation nexted inside of an O(n) operation,
+/// is O of (n) square -> O(n2)
+/// -> QUADRATIC TIME
+pub fn _print_all_pairs(n: u32) {
+    for i in 0..n {
+        for j in 0..n {
+            println!("{} {}", i, j);
+        }
+    }
+}
