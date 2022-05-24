@@ -93,4 +93,11 @@ pub fn _log_at_least_5(n: u8) {
     }
 }
 
-
+// SECTION  5 ->
+/// Time complexity O(1)
+/// -> CONSTANT TIME
+pub fn _log_at_most_5(n: u8) {
+    for i in 1..=clamp_max(n, 5) {
+        println!("{}", i);
+    }
+}
