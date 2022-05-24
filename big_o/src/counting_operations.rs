@@ -1,3 +1,5 @@
+use num_traits::{ clamp_min, clamp_max };
+
 /* NOTE:
    Rather than counting seconds, which are so variable...
    
@@ -80,3 +82,15 @@ pub fn _print_all_pairs(n: u32) {
         }
     }
 }
+
+// SECTION  4 ->
+/// The Big O of the function in total can be
+/// simplified to O(n) instead of O(2n)
+/// -> LINEAR TIME
+pub fn _log_at_least_5(n: u8) {
+    for i in 1..=clamp_min(n, 5) {
+        println!("{}", i)
+    }
+}
+
+

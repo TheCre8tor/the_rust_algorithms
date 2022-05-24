@@ -8,5 +8,5 @@ fn main() {
     println!("test 1: {}, \n test 2: {}", test1, test2);
 
     // counting_operations::count_up_and_down(10);
-    // counting_operations::print_all_pairs(10);
+    // counting_operations::_log_at_most_5(0);
 }
