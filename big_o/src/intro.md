@@ -28,3 +28,10 @@ by the algorithm with respect to the input size.
 
 Auxiliary Space Complexity is the space required by the
 algorithm, not including space taken up by the inputs.
+
+# Space Complexity in Rust
+
+- Most primitives (bool, u8, i8, char etc...) are constant space
+- Strings require O(n) space where n is the string length
+- Compound types are generally O(n), where n is the length
+  (for arrays) or the number of keys (for objects)
