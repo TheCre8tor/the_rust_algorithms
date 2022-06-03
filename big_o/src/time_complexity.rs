@@ -16,7 +16,7 @@ fn _add_up_to(n: u32) -> u32 {
 /* List of operations
    1. multiplication (*) operation
    2. addition (+) operation
-   3. divition (/) operation
+   3. division (/) operation
 
    EXPLANATION: 
    There are 3 Operations and it doesn't matter what (n) is,
