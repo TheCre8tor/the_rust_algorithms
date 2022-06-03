@@ -1,6 +1,6 @@
 /// The space complexity of this function is constant space 
 /// -> O(1) space!
-/// Because we are only assigning values to a premitive
+/// Because we are only assigning values to a primitive
 /// data type.
 pub fn _sum(arr: Vec<u8>) -> u8 {
     let mut total = 0;
