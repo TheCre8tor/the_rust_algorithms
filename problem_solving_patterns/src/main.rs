@@ -61,6 +61,13 @@ fn main() {
           * char_count("Your PIN number is 1234") -> { 1: 1, 2: 1, 3: 1, 4: 1, b: 1, e: 1, 1: 2, etc... }
 
        d. Solve/Simplify.
-       e. Look Back and Refactor.
+          - Find the core difficulty in what you're trying to do
+          - Temporarily ignore that difficulty
+          - Write a simplified solution.
+          - Then incorporate that difficulty back in.
+
+       e. Look Back and Refactor. 
        */
 }
+
+
