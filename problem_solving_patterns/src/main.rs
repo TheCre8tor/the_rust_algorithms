@@ -81,33 +81,32 @@ fn main() {
 
     */
 
-    char_count("Hello hi!");
-    char_count("Alexander12344#*&^@")
+    let response = char_count("Alexander1123443*&#".to_string());
+    println!("{:?}", response);
 }
 
 // First Solution ->
-fn char_count(name: &str) {
-    let mut object: HashMap<&str, u8> = HashMap::new();
-
-    // Regex for alphanumeric -->
-    let regex = Regex::new(r"[a-z0-9]").unwrap();
+fn char_count(name: String) -> HashMap<String, u8> {
+    let mut object: HashMap<String, u8> = HashMap::new();
 
     let name = name.to_lowercase();
+
+    let regex = Regex::new(r"[a-z0-9]").unwrap();
 
     for item in name.split("") {
         // Check if HashMap contains a key, if true increment it value.
         if object.contains_key(item) {
             let fount_item = *object.get(item).expect("");
 
-            object.insert(item, fount_item + 1);
-        }
-
-        // Definitely!, it does not contains the key, check if key is
-        // an alphanumeric char, if true set it value to 1
-        if regex.is_match(&item) {
-            object.insert(item, 1);
+            object.insert(item.to_string(), fount_item + 1);
+        } else {
+            // Definitely, it does not contains the key, check if key is
+            // an alphanumeric char, if true set it value to 1
+            if regex.is_match(&item) {
+                object.insert(item.to_string(), 1);
+            }
         }
     }
 
-    println!("{:?}", object);
+    object
 }
