@@ -1,3 +1,4 @@
+use regex::Regex;
 use std::collections::HashMap;
 
 fn main() {
@@ -69,25 +70,42 @@ fn main() {
        - Then incorporate that difficulty back in.
 
     e. Look Back and Refactor.
+       o- Refactoring Questions ->
+       - Can you check the result?
+       - Can you derive the result difficulty?
+       - Can you understand it at a glance?
+       - Can you use the result or method for some other problem?
+       - Can you improve the performance of your solution?
+       - Can you think of other ways to refactor?
+       - How have other people solved this problem?
+
     */
 
-    char_count("Alexander");
+    char_count("Hello hi!");
+    char_count("Alexander12344#*&^@")
 }
 
+// First Solution ->
 fn char_count(name: &str) {
     let mut object: HashMap<&str, u8> = HashMap::new();
+
+    // Regex for alphanumeric -->
+    let regex = Regex::new(r"[a-z0-9]").unwrap();
 
     let name = name.to_lowercase();
 
     for item in name.split("") {
+        // Check if HashMap contains a key, if true increment it value.
         if object.contains_key(item) {
             let fount_item = *object.get(item).expect("");
 
             object.insert(item, fount_item + 1);
-        } else {
-            if item != "" {
-                object.insert(item, 1);
-            }
+        }
+
+        // Definitely!, it does not contains the key, check if key is
+        // an alphanumeric char, if true set it value to 1
+        if regex.is_match(&item) {
+            object.insert(item, 1);
         }
     }
 
