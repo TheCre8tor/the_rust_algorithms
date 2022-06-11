@@ -71,26 +71,25 @@ fn main() {
     e. Look Back and Refactor.
     */
 
-    char_count("HiDear");
+    char_count("Alexander");
 }
 
-fn char_count(stri: &str) {
-    let mut result: HashMap<&str, u8> = HashMap::new();
+fn char_count(name: &str) {
+    let mut object: HashMap<&str, u8> = HashMap::new();
 
-    println!("Array: {:?}", stri.split("").collect::<Vec<&str>>());
+    let name = name.to_lowercase();
 
-    for item in stri.split("") {
-        if result.contains_key(item) {
-            let search = *result.get(item).expect("");
+    for item in name.split("") {
+        if object.contains_key(item) {
+            let fount_item = *object.get(item).expect("");
 
-            result.insert(item, search + 1);
+            object.insert(item, fount_item + 1);
         } else {
             if item != "" {
-                result.insert(item, 1);
+                object.insert(item, 1);
             }
         }
     }
 
-    println!("{:?}", result.keys());
-    println!("{:?}", result.values());
+    println!("{:?}", object);
 }
