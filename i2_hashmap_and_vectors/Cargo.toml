@@ -1,5 +1,5 @@
 [package]
-name = "structs_and_vectors"
+name = "i2_hashmap_and_vectors"
 version = "0.1.0"
 edition = "2021"
 

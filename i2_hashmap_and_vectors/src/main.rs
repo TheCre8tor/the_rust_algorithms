@@ -1,7 +1,7 @@
-mod objects;
 mod arrays;
+mod hashmap;
 
 fn main() {
-    objects::big_o();
+    hashmap::big_o();
     arrays::big_o();
 }

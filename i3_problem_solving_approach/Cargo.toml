@@ -1,9 +1,9 @@
 [package]
-name = "big_o"
+name = "i3_problem_solving_approach"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-num-traits = "0.2"
+regex = "1.5.5"
