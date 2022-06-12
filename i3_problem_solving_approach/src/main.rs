@@ -4,9 +4,9 @@ use std::collections::HashMap;
 fn main() {
     // println!("Hello, world!");
 
-    //? HOW DO YOU IMPROVE IN PROBLEM SOLVING?
-    /* 1. Devise a plan for solving problems
-    2. Master common problem solving patterns
+    /* HOW DO YOU IMPROVE IN PROBLEM SOLVING?
+       * 1. Devise a plan for solving problems
+       2. Master common problem solving patterns
 
 
     SECTION  1 -> Problem Solving Strategies.
