@@ -1,3 +1,6 @@
+#[path = "./frequency_counter.rs"]
+mod frequency_counter;
+
 fn main() {
     println!("Hello, world!");
 
@@ -15,4 +18,6 @@ fn main() {
          - Backtracking
          - Many more!...
     */
+
+    frequency_counter::run();
 }
