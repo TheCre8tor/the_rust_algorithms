@@ -85,7 +85,6 @@ fn main() {
     println!("{:?}", response);
 }
 
-// First Solution ->
 fn char_count(name: String) -> HashMap<String, u8> {
     let mut object: HashMap<String, u8> = HashMap::new();
 
@@ -96,7 +95,11 @@ fn char_count(name: String) -> HashMap<String, u8> {
     for item in name.split("") {
         // Check if HashMap contains a key, if true increment it value.
         if object.contains_key(item) {
-            let fount_item = *object.get(item).expect("");
+            let fount_item = match object.get(item) {
+                // Option could either be 'Some' or 'None'
+                Some(value) => *value,
+                None => 0u8,
+            };
 
             object.insert(item.to_string(), fount_item + 1);
         } else {
