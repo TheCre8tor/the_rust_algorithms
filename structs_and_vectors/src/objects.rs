@@ -9,7 +9,8 @@ pub fn big_o() {
     objects are an excellent choice!
     */
 
-    #[derive(Debug)] 
+    //! TODO: Refactor with HashMap -->
+    #[derive(Debug)]
     struct Instructor {
         first_name: String,
         is_instructor: bool,
@@ -20,12 +21,12 @@ pub fn big_o() {
         first_name: String::from("Kelly"),
         is_instructor: true,
         favourite_number: vec![1, 2, 3, 4],
-    };  
+    };
 
     // Insertion -->
     instructor.favourite_number.push(5);
     instructor.is_instructor = false;
     instructor.first_name = "Alexander".to_owned();
-    
+
     println!("{:?}", instructor);
 }

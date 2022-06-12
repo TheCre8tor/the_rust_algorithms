@@ -78,10 +78,9 @@ fn main() {
        - Can you improve the performance of your solution?
        - Can you think of other ways to refactor?
        - How have other people solved this problem?
-
     */
 
-    let response = char_count("Alexander1123443*&#".to_string());
+    let response = char_count("AlexAnder1123443*&#a".to_string());
     println!("{:?}", response);
 }
 
