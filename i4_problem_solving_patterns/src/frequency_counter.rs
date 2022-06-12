@@ -4,7 +4,7 @@ pub fn run() {
     /* FREQUENCY COUNTER
        This pattern uses objects, sets, or hashmap to 
        collect values/frequencies of values. it usually
-       O(N) time complexity.
+       an O(N) time complexity.
 
        This can often avoid the need for nested loops
        or O(N^2) operations with arrays/strings.
@@ -77,6 +77,10 @@ fn same(arr_1: Vec<u8>, arr_2: Vec<u8>) -> bool {
         if valid != valid_2 {
             return false;
         }
+
+        // Experimental:
+        // let vali = frequency_counter_1[&2_u8];
+        // println!("JS: {}", vali);
     }
 
     true
