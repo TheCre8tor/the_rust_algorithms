@@ -72,7 +72,7 @@ fn same(arr_1: Vec<u8>, arr_2: Vec<u8>) -> bool {
             None => return false,
         };
 
-        // Check if values correspond -->
+        // Compare the values correspond -->
         let fc_value_1 = frequency_counter_2.get(&key.pow(2));
         let fc_value_2 = frequency_counter_1.get(key);
 

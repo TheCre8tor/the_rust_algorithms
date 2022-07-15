@@ -1,5 +1,5 @@
-#[path = "./frequency_counter.rs"]
-mod frequency_counter;
+mod anagram_assignment;
+mod frequency_counter_v1;
 
 fn main() {
     /* HOW DO YOU IMPROVE IN PROBLEM SOLVING?
@@ -17,5 +17,6 @@ fn main() {
          - Many more!...
     */
 
-    frequency_counter::run();
+    frequency_counter_v1::run();
+    anagram_assignment::run();
 }
