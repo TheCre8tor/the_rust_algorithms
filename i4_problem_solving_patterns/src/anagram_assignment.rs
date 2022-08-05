@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 pub fn run() {
-    let _result = anagram("azar", "aazy");
+    let _result = anagram("azj", "aaz");
 
     println!("{}", _result);
 }
@@ -11,41 +11,26 @@ fn anagram(name_one: &str, name_two: &str) -> bool {
         return false;
     }
 
-    let mut name_one_storage: HashMap<&str, u8> = HashMap::new();
-    let mut name_two_storage: HashMap<&str, u8> = HashMap::new();
+    let mut lookup_map: HashMap<&str, u8> = HashMap::new();
 
-    for value in name_one.split("") {
-        let exist_value = match name_one_storage.get(value) {
+    for letter in name_two.split("") {
+        let has_letter = match lookup_map.get(letter) {
             Some(item) => *item,
             None => 0,
         };
 
-        if name_one_storage.contains_key(value) && !value.is_empty() {
-            name_one_storage.insert(value, exist_value + 1);
-        } else if !value.is_empty() {
-            name_one_storage.insert(value, 1);
+        if lookup_map.contains_key(&letter) && !letter.is_empty() {
+            lookup_map.insert(letter, has_letter + 1);
+        } else if !letter.is_empty() {
+            lookup_map.insert(letter, 1);
         }
     }
 
-    for value in name_two.split("") {
-        let value_exist = match name_one_storage.get(value) {
-            Some(item) => *item,
-            None => 0,
-        };
+    // for letter in name_two.split("") {
+    //     let
+    // }
 
-        if name_two_storage.contains_key(value) && !value.is_empty() {
-            name_two_storage.insert(value, value_exist + 1);
-        } else if !value.is_empty() {
-            name_two_storage.insert(value, 1);
-        }
-    }
-
-    for value in name_two_storage.keys() {
-        match name_one_storage.get_key_value(value) {
-            Some(_) => true,
-            None => return false,
-        };
-    }
+    println!("{:?}", lookup_map);
 
     true
 }
