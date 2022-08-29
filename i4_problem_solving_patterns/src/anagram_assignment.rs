@@ -11,26 +11,22 @@ fn anagram(name_one: &str, name_two: &str) -> bool {
         return false;
     }
 
-    let mut lookup_map: HashMap<&str, u8> = HashMap::new();
+    let mut lookup = HashMap::<u8, u8>::new();
 
-    for letter in name_two.split("") {
-        let has_letter = match lookup_map.get(letter) {
+    for idx in name_one.bytes() {
+        let look = match lookup.get(&idx) {
             Some(item) => *item,
             None => 0,
         };
 
-        if lookup_map.contains_key(&letter) && !letter.is_empty() {
-            lookup_map.insert(letter, has_letter + 1);
-        } else if !letter.is_empty() {
-            lookup_map.insert(letter, 1);
+        if lookup.contains_key(&idx) {
+            lookup.insert(idx, look + 1);
+        } else {
+            lookup.insert(idx, 1);
         }
     }
 
-    // for letter in name_two.split("") {
-    //     let
-    // }
-
-    println!("{:?}", lookup_map);
+    println!("{:?}", lookup);
 
     true
 }
