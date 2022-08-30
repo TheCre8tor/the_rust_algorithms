@@ -6,6 +6,7 @@ pub fn run() {
     println!("{}", _result);
 }
 
+/// This function result to `O(2N)` or can be simplified to `O(N)` Time Complexity
 fn anagram(name_one: &str, name_two: &str) -> bool {
     if name_one.len() != name_two.len() {
         return false;
