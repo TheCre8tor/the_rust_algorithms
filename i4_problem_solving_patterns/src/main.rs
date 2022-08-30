@@ -1,5 +1,6 @@
 mod anagram_assignment;
 mod frequency_counter_v1;
+mod multiple_pointers;
 
 fn main() {
     /* HOW DO YOU IMPROVE IN PROBLEM SOLVING?
@@ -19,4 +20,5 @@ fn main() {
 
     frequency_counter_v1::run();
     anagram_assignment::run();
+    multiple_pointers::run();
 }
