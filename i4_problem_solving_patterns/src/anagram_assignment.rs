@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 pub fn run() {
-    let _result = anagram("azj", "aaz");
+    let _result = anagram("alexander", "aerlexnad");
 
     println!("{}", _result);
 }
@@ -26,7 +26,18 @@ fn anagram(name_one: &str, name_two: &str) -> bool {
         }
     }
 
-    println!("{:?}", lookup);
+    for idx in name_two.bytes() {
+        let look = match lookup.get(&idx) {
+            Some(item) => *item,
+            None => 0,
+        };
+
+        if look != 0 {
+            lookup.insert(idx, look - 1);
+        } else {
+            return false;
+        }
+    }
 
     true
 }

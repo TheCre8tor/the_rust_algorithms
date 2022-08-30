@@ -27,7 +27,7 @@ pub fn run() {
     let arr_2: Vec<u8> = vec![9, 1, 4, 4];
 
     let result = same(arr_1, arr_2);
-    // println!("{}", result);
+    println!("{}", result);
 }
 
 /// This function result to `O(3N)` or can be simplified to `O(N)` Time Complexity
