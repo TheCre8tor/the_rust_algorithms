@@ -1,5 +1,6 @@
 mod anagram_assignment;
 mod frequency_counter_v1;
+mod frequency_counter_v2;
 mod multiple_pointers;
 
 fn main() {
@@ -19,6 +20,7 @@ fn main() {
     */
 
     frequency_counter_v1::run();
+    frequency_counter_v2::run();
     anagram_assignment::run();
     multiple_pointers::run();
 }
