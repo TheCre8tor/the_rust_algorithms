@@ -6,6 +6,10 @@ pub fn run() {
 }
 
 fn count_unique_values(arr: &mut Vec<i8>) -> usize {
+    if arr.len() == 0 {
+        return 0;
+    }
+
     let mut i = 0;
 
     for idx in 1..arr.len() {
