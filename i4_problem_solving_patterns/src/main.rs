@@ -1,5 +1,4 @@
 mod anagram_assignment;
-mod count_unique_values;
 mod frequency_counter_v1;
 mod frequency_counter_v2;
 mod two_pointers_v1;
