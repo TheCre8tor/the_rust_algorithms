@@ -1,8 +1,9 @@
 mod anagram_assignment;
-mod frequency_counter_v1;
-mod frequency_counter_v2;
-mod two_pointers_v1;
-mod two_pointers_v2;
+mod i1_frequency_counter_v1;
+mod i1_frequency_counter_v2;
+mod i2_two_pointers_v1;
+mod i2_two_pointers_v2;
+mod i3_sliding_window_v1;
 
 fn main() {
     /* HOW DO YOU IMPROVE IN PROBLEM SOLVING?
@@ -20,10 +21,10 @@ fn main() {
          - Many more!...
     */
 
-    frequency_counter_v1::run();
-    frequency_counter_v2::run();
+    i1_frequency_counter_v1::run();
+    i1_frequency_counter_v2::run();
     anagram_assignment::run();
-    two_pointers_v1::run();
-    two_pointers_v2::run();
-    count_unique_values::run();
+    i2_two_pointers_v1::run();
+    i2_two_pointers_v2::run();
+    i3_sliding_window_v1::run();
 }
