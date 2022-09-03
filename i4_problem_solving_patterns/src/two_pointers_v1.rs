@@ -22,7 +22,8 @@ pub fn run() {
       sumZero([1, 2, 3]) -> []
     */
 
-    let result: Vec<i8> = sum_zero(vec![-4, -6, -1, 0, 1, 2, 3]);
+    let result: Vec<i8> = sum_zero(vec![-4, -3, -2, -1, 0, 1, 2, 3, 10]);
+    // let result: Vec<i8> = sum_zero(vec![-4, -3, -2, -1, 0, 5, 10]);
 
     println!("Sum Zero: {:?}", result);
 }
@@ -36,11 +37,8 @@ fn sum_zero(arr: Vec<i8>) -> Vec<i8> {
         let sum = arr[left] + arr[right];
 
         if sum == 0 {
-            println!("Left: {left} | right: {right}");
-
             return vec![arr[left], arr[right]];
         } else if sum > 0 {
-            // println!("Left: {left} | right: {right}");
             right = right - 1;
         } else {
             left = left + 1;

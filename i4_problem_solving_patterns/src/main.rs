@@ -1,7 +1,9 @@
 mod anagram_assignment;
+mod count_unique_values;
 mod frequency_counter_v1;
 mod frequency_counter_v2;
-mod multiple_pointers;
+mod two_pointers_v1;
+mod two_pointers_v2;
 
 fn main() {
     /* HOW DO YOU IMPROVE IN PROBLEM SOLVING?
@@ -22,5 +24,7 @@ fn main() {
     frequency_counter_v1::run();
     frequency_counter_v2::run();
     anagram_assignment::run();
-    multiple_pointers::run();
+    two_pointers_v1::run();
+    two_pointers_v2::run();
+    count_unique_values::run();
 }
