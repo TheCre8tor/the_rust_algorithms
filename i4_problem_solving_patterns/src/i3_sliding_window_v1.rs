@@ -30,13 +30,14 @@ pub fn run() {
 
 fn max_subarray_sum(arr: Vec<u8>, num: usize) -> u8 {
     let mut max_sum = 0;
+
     let mut temp_sum = 0;
 
     if arr.len() < num {
         return 0;
     }
 
-    for idx in 0..arr.len() {
+    for idx in 0..num {
         max_sum += arr[idx];
     }
 
@@ -45,9 +46,6 @@ fn max_subarray_sum(arr: Vec<u8>, num: usize) -> u8 {
     for idx in num..arr.len() {
         temp_sum = temp_sum - arr[idx - num] + arr[idx];
         max_sum = u8::max(max_sum, temp_sum);
-
-        println!("Max: {max_sum}");
-        println!("Temp: {temp_sum}");
     }
 
     max_sum
