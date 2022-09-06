@@ -24,28 +24,41 @@ pub fn run() {
       maxSubarraySum([], 4) -> null
     */
 
-    let result = max_subarray_sum(vec![1, 2, 5, 2, 8, 1, 5], 2);
+    let data: Vec<i8> = vec![2, 6, 9, 2, 1, 8, 5, 6, 3];
+    let result = max_subarray_sum(data, 3);
+
     println!("MAX: {}", result);
 }
 
-fn max_subarray_sum(arr: Vec<u8>, num: usize) -> u8 {
-    let mut max_sum = 0;
-
-    let mut temp_sum = 0;
-
+fn max_subarray_sum(arr: Vec<i8>, num: usize) -> i8 {
     if arr.len() < num {
         return 0;
     }
+
+    let mut max_sum = -0;
+    let mut temp_sum = 0;
 
     for idx in 0..num {
         max_sum += arr[idx];
     }
 
+    // println!("Max sum: {}", max_sum);
+    // println!("Temp sum: {}", temp_sum);
+
     temp_sum = max_sum;
 
     for idx in num..arr.len() {
         temp_sum = temp_sum - arr[idx - num] + arr[idx];
-        max_sum = u8::max(max_sum, temp_sum);
+
+        // println!("Temp two: {temp_sum}");
+
+        if temp_sum > max_sum {
+            max_sum = temp_sum;
+        }
+
+        // max_sum = i8::max(max_sum, temp_sum);
+
+        println!("Temp: {}, Max: {}", temp_sum, max_sum);
     }
 
     max_sum
