@@ -25,9 +25,9 @@ pub fn run() {
     */
 
     let data: Vec<i8> = vec![2, 6, 9, 2, 1, 8, 5, 6, 3];
-    let result = max_subarray_sum(data, 3);
+    let _result = max_subarray_sum(data, 3);
 
-    println!("MAX: {}", result);
+    // println!("MAX: {}", result);
 }
 
 fn max_subarray_sum(arr: Vec<i8>, num: usize) -> i8 {

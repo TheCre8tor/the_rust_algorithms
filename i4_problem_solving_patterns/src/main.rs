@@ -4,6 +4,7 @@ mod i1_frequency_counter_v2;
 mod i2_two_pointers_v1;
 mod i2_two_pointers_v2;
 mod i3_sliding_window_v1;
+mod i4_divide_and_conquer;
 
 fn main() {
     /* HOW DO YOU IMPROVE IN PROBLEM SOLVING?
@@ -27,4 +28,5 @@ fn main() {
     i2_two_pointers_v1::run();
     i2_two_pointers_v2::run();
     i3_sliding_window_v1::run();
+    i4_divide_and_conquer::run();
 }

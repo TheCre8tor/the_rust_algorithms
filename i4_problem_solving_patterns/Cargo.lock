@@ -3,5 +3,14 @@
 version = 3
 
 [[package]]
+name = "common_math"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6790c2d7328f5945a914530e143c024e724903f63a102f9d04c369d623b3b6e3"
+
+[[package]]
 name = "i4_problem_solving_patterns"
 version = "0.1.0"
+dependencies = [
+ "common_math",
+]
