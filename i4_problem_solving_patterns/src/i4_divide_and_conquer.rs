@@ -1,5 +1,3 @@
-use common_math::rounding::floor;
-
 pub fn run() {
     let data = vec![-1, -2, 4, 8, 10, 12, 15, 16, 18];
     let result = search(data, 18);
@@ -13,8 +11,6 @@ fn search(vector: Vec<i8>, value: i8) -> i8 {
 
     while min <= max {
         let divide = (min + max) / 2;
-
-        // let middle = floor(divide, 1) as usize;
 
         println!("Min: {} | Max: {}", min, max);
         println!("Divide: {}", divide);
