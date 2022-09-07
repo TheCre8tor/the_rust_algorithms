@@ -31,34 +31,47 @@ pub fn run() {
 }
 
 fn max_subarray_sum(arr: Vec<i8>, num: usize) -> i8 {
+    let mut max_sum = -0;
+    let mut temp_sum = 0;
+
+    /* If the length of the array is lower
+    than the specified num, return 0 */
     if arr.len() < num {
         return 0;
     }
 
-    let mut max_sum = -0;
-    let mut temp_sum = 0;
-
+    /* Sumed up the items in the array from 0..num length */
     for idx in 0..num {
         max_sum += arr[idx];
     }
 
-    // println!("Max sum: {}", max_sum);
-    // println!("Temp sum: {}", temp_sum);
-
+    /* Assign the value in max_sum into temp_sum */
     temp_sum = max_sum;
 
     for idx in num..arr.len() {
+        /* subtract first moving index value from temp_sum,
+        add the item at the location of idx, and reassign it
+        value to temp_sum. */
+        // [2, 6, 9, 2, 1, 8, 5, 6, 3]
+        //  -        +
+        // [2, 6, 9, 2, 1, 8, 5, 6, 3]
+        //     -        +
+        // [2, 6, 9, 2, 1, 8, 5, 6, 3]
+        //        -        +
+        // [2, 6, 9, 2, 1, 8, 5, 6, 3]
+        //           -        +
+        // [2, 6, 9, 2, 1, 8, 5, 6, 3]
+        //              -        +
+        // [2, 6, 9, 2, 1, 8, 5, 6, 3]
+        //                 -        +
+
         temp_sum = temp_sum - arr[idx - num] + arr[idx];
 
-        // println!("Temp two: {temp_sum}");
+        max_sum = i8::max(max_sum, temp_sum);
 
-        if temp_sum > max_sum {
-            max_sum = temp_sum;
-        }
-
-        // max_sum = i8::max(max_sum, temp_sum);
-
-        println!("Temp: {}, Max: {}", temp_sum, max_sum);
+        // if temp_sum > max_sum {
+        //     max_sum = temp_sum;
+        // }
     }
 
     max_sum
