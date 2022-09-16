@@ -5,6 +5,7 @@ pub fn run() {
     println!("Picked: {}", result);
 }
 
+/// This function result to `Log(N)` Time Complexity, and `O(1)` Space Complexity
 fn search(vector: Vec<i8>, value: i8) -> i8 {
     let mut min = 0;
     let mut max = vector.len() - 1;
