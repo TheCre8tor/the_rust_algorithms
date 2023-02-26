@@ -2,11 +2,9 @@ use regex::Regex;
 use std::collections::HashMap;
 
 fn main() {
-    // println!("Hello, world!");
-
     /* HOW DO YOU IMPROVE IN PROBLEM SOLVING?
-       * 1. Devise a plan for solving problems
-       2. Master common problem solving patterns
+       -> 1. Devise a plan for solving problems
+       -> 2. Master common problem solving patterns
 
 
     SECTION  1 -> Problem Solving Strategies.
@@ -80,11 +78,11 @@ fn main() {
        - How have other people solved this problem?
     */
 
-    let response = char_count("AlexAnder1123443*&#a".to_string());
+    let response = char_count("AlexAnder1123443*&#a");
     println!("{:?}", response);
 }
 
-fn char_count(name: String) -> HashMap<String, u8> {
+fn char_count(name: &str) -> HashMap<String, u8> {
     let mut object: HashMap<String, u8> = HashMap::new();
 
     let name = name.to_lowercase();
@@ -104,7 +102,7 @@ fn char_count(name: String) -> HashMap<String, u8> {
         } else {
             // Definitely, it does not contains the key, check if key is
             // an alphanumeric char, if true set it value to 1
-            if regex.is_match(&item) {
+            if regex.is_match(item) {
                 object.insert(item.to_string(), 1);
             }
         }
